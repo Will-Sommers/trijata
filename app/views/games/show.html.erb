@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+<div id='game'> </div>
+<%= javascript_tag do %>
+  var gameData = <%= @game.to_s.html_safe %>;
+  var game = React.createElement(Game, {gameData: gameData});
+  React.render(game, document.getElementById('game'));
+<% end %>

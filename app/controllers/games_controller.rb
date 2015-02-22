@@ -10,6 +10,31 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
+    game = {
+      name: 'Teh Game',
+      categories: [
+        {
+          name: 'Potent Potables',
+          boxes: [
+            {
+              question: 'What is the what?',
+              answer: 'The What'
+            }
+          ]
+        },
+        {
+          name: 'Potent Potables1',
+          boxes: [
+            {
+              question: 'What is the what?',
+              answer: 'The What'
+            }
+          ]
+        }
+      ]
+
+    }
+    @game = game.to_json
   end
 
   # GET /games/new
