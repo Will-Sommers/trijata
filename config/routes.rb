@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'scaffold_controller/Game'
+
+  get 'scaffold/Questions'
+
+  get 'scaffold/Game'
+
+  get 'welcome/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
