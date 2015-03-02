@@ -40,3 +40,19 @@ var Game = React.createClass({displayName: 'Game',
 });
 
 
+
+var CreateGame = React.createClass({displayName: 'CreateGame',
+  render: function() {
+    return (
+      <form>
+        <div className='form-element'>
+          <input type='text' placeholder='Add your board name here' />
+          <label name='board_name'>Board Name</label>
+        </div>
+      </form>
+    )
+  }
+});
+
+
+
